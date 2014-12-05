@@ -1,0 +1,68 @@
+
+<html>
+<head>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: 1C1C1C;
+}
+img{border:0;}
+a {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: FFFFFF;
+}
+a:visited {
+	color: FFFFFF;
+}
+a:hover {
+	color: FFFFFF;
+}
+a:active {
+	color: FFFFFF;
+}
+-->
+</style>
+<title>faqs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<script type="text/javascript" language="javascript" src="js/amortization.js"></script>
+<body bgcolor="#C5C5C5" background="images/5-back-30.jpg" leftmargin="0px" topmargin="0px" style="background-repeat:repeat-x; background-position:top; background-attachment:fixed; ">
+<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+  <tr background="images/5-back-30.jpg">
+    <td height="100%" valign="top" background="images/back-2.jpg" style="background-repeat:repeat-x;background-position:top;padding-top:12px;padding-left:16px; padding-right:16px; "><form action="" method="post" name="form" id="temps">
+      <div id="containerCalcTable">
+      <table id="table_1" class="formTable" cellspacing="0">
+        <thead>
+          <tr>
+            <th id="th_1" colspan="2"></th>
+          </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+          <tr class="required">
+            <td class="labelColumn"><span>Loan Amount:</span></td>
+            <td class="valueColumn"><input type="text" name="p" size="15" onfocus="document.form.p.select(); document.form.p.focus();" value="$125,000" onchange="basicedit();this.value=formatCurrency(this.value);" maxlength="9" /></td>
+          </tr>
+          <tr>
+            <td class="labelColumn"><span>Number of Payments:</span></td>
+            <td class="valueColumn"><input type="text" name="y" size="15" onfocus="document.form.y.select(); document.form.y.focus();" value="360" onchange="basicedit();" maxlength="5" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn"><span>Interest Rate:</span></td>
+            <td class="valueColumn"><input type="text" name="ir" size="15" onfocus="document.form.ir.select(); document.form.ir.focus();" value="7.5%" onchange="basicedit();this.value=addPct(this.value);" maxlength="6" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <input name="button" type="button" class="button" id="calculate" onclick="javascript:computeForm(document.form);" value="Calculate"/>
+      </div>
+    </form></td>
+  </tr>
+
+</table>
+</body>
+</html>

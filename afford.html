@@ -1,0 +1,102 @@
+
+<html>
+<head>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: 1C1C1C;
+}
+img{border:0;}
+a {
+	font-family: Tahoma;
+	font-size: 11px;
+	color: FFFFFF;
+}
+a:visited {
+	color: FFFFFF;
+}
+a:hover {
+	color: FFFFFF;
+}
+a:active {
+	color: FFFFFF;
+}
+-->
+</style>
+<title>faqs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+<script type="text/javascript" language="javascript" src="js/afford.js"></script>
+<body bgcolor="#C5C5C5" background="images/5-back-30.jpg" leftmargin="0px" topmargin="0px" style="background-repeat:repeat-x; background-position:top; background-attachment:fixed; ">
+<table width="100%"  border="0" cellspacing="0" cellpadding="5">
+  <tr background="images/5-back-30.jpg">
+    <td height="100%" valign="top" background="images/back-2.jpg" style="background-repeat:repeat-x;background-position:top;padding-top:12px;padding-left:16px; padding-right:16px; "><form action="" method="post" name="temps" id="temps">
+      <div id="containerCalcTable">
+      <table id="table_1" class="formTable" cellspacing="0">
+        <thead>
+          <tr>
+            <th id="th_1" colspan="2"></th>
+          </tr>
+        </thead>
+        <tfoot>
+        </tfoot>
+        <tbody>
+          <tr class="required">
+            <td class="labelColumn"><span>Monthly Income:</span></td>
+            <td class="valueColumn"><input type="text" name="income" size="15" value="$3,500" onfocus="document.temps.income.select(); document.temps.income.focus();" onchange="basicedit();this.value=formatCurrency(this.value);" maxlength="9" /></td>
+          </tr>
+          <tr>
+            <td class="labelColumn"><span>Monthly Debt Payments (include credit cards):</span></td>
+            <td class="valueColumn"><input type="text" name="auto" size="15" value="$400" onfocus="document.temps.auto.select(); document.temps.auto.focus();" onchange="basicedit();this.value=formatCurrency(this.value);" maxlength="9" /></td>
+          </tr>
+          <tr class="required">
+            <td class="labelColumn"><span>Interest Rate:</span></td>
+            <td class="valueColumn"><input type="text" name="rate" size="15" value="7.5%" onfocus="document.temps.rate.select(); document.temps.rate.focus();" onchange="basicedit();this.value=addPct(this.value);" maxlength="5" /></td>
+          </tr>
+        </tbody>
+      </table>
+      <div>
+        <input name="button" type="button" class="button" id="calculate" onclick="javascript:computeForm(document.temps);" value="Calculate"/>
+      </div>
+      <div id="containerResultsTable">
+        <div id="tblHdr"> <span id="span_1">Results:</span> <span id="span_2" align="right"><a id="a_printPage" href="javascript:window.print();">print this page</a></span> </div>
+        <div style="clear:both"></div>
+        <table id="table_2" class="table" cellspacing="0">
+          <thead>
+            <tr>
+              <th id="th_3">&nbsp;</th>
+              <th id="th_4">15yr Loan</th>
+              <th id="th_5">30yr Loan</th>
+            </tr>
+          </thead>
+          <tfoot>
+          </tfoot>
+          <tbody>
+            <tr class="altColor1">
+              <td class="col1">You may qualify for a mortgage payment of:</td>
+              <td class="col2"><input type="text" name="payment2" value="$" size="6" readonly="readonly" class="c2" /></td>
+              <td class="col3"><input type="text" name="payment" value="$" size="6" readonly="readonly" class="c2" /></td>
+            </tr>
+            <tr class="altColor2">
+              <td class="col1">You may qualify for a loan amount of:</td>
+              <td class="col2"><input type="text" name="amount2" value="$" size="6" readonly="readonly" class="c2" /></td>
+              <td class="col3"><input type="text" name="amount" value="$" size="6" readonly="readonly" class="c2" /></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </form>
+    <script language="JavaScript" type="text/javascript">
+            //<![CDATA[
+                computeForm(document.forms.temps);
+                document.forms.temps.elements[0].focus();
+                document.forms.temps.elements[0].select();
+            //]]>
+            </script></td>
+  </tr>
+
+</table>
+</body>
+</html>
